@@ -64,11 +64,12 @@ df_lessons = pd.DataFrame(columns=lessons_fields)
 
 for i in courses_id:
     df_temp = lessons_info_by_course(i, lessons_fields, 3)
+    df_temp['course'] = i
     df_lessons = pd.concat([df_lessons, df_temp], ignore_index=True)
 
 
 lessons_id = [int(x) for x in df_lessons['id']]
-step_fields = ['id', 'position', 'viewed_by', 'passed_by', 'correct_ratio']
+step_fields = ['id', 'lesson', 'position', 'viewed_by', 'passed_by', 'correct_ratio']
 df_steps = pd.DataFrame(columns=step_fields)
 
 for i in lessons_id:
