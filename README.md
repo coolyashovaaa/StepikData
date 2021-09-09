@@ -13,7 +13,7 @@ Function `lessons_info_by_course(course_id, fields, delay)` returns `pandas` Dat
 * `fields`: list with lesson [parameters](https://stepik.org/api/docs/#!/lessons);
 * `delay`: delay that will come in handy for multiple `GET` requests further.
 
-### Step data
+### Steps data
 
 The data for steps is collected in a similar way. The function `steps_info_by_lesson(lesson_id, fields, delay)` takes:
 * `lesson_id`: lesson ID obtained with `lessons_info_by_course()`;
